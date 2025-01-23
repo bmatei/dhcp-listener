@@ -7,6 +7,8 @@ It maintains a list of `subscribers` in `/usr/share/dhcp_listener/subscribers` o
 
 Example: `subscribed-cli nginx-proxy 192.168.1.15`
 
+An example in the wild can be seen here: https://github.com/bmatei/internal-dns/blob/main/src/new_dhcp_event_cb.sh
+
 ## Build dependencies:
  * bats (https://github.com/bats-core)
  * build-rules (https://github.com/bmatei/build_rules)
