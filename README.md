@@ -9,6 +9,8 @@ Example: `subscribed-cli nginx-proxy 192.168.1.15`
 
 An example in the wild can be seen here: https://github.com/bmatei/internal-dns/blob/main/src/new_dhcp_event_cb.sh
 
+If you have any questions feel free to ping me at busui.matei1994@gmail.com
+
 ## Build dependencies:
  * bats (https://github.com/bats-core)
  * build-rules (https://github.com/bmatei/build_rules)
