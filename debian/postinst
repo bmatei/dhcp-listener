@@ -1,4 +1,5 @@
 #!/bin/bash
 
-#systemctl stop systemd-resolved 2>/dev/null && systemctl disable systemd-resolved || :
-#systemctl start dnsmasq
+systemctl daemon-reload
+systemctl enable dhcp_listener
+systemctl start dhcp_listener
