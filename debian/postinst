@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#systemctl stop systemd-resolved 2>/dev/null && systemctl disable systemd-resolved || :
+#systemctl start dnsmasq

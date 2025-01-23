@@ -1,0 +1,10 @@
+Package: dhcp-listener
+Version: 1.0-1
+Section: base
+Priority: optional
+Architecture: all
+Maintainer: Matei Busui <matei@busui.ro>
+Depends: coreutils, sed, mawk, tcpdump, iproute2, expect
+Description: DHCP listener
+ Listens to UDP ports 67-68 and notifies
+ subscribers of any new hosts in the network
