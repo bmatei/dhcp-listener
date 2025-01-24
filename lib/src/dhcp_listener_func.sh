@@ -1,3 +1,5 @@
+#!/bin/bash
+
 find_iface() {
 	ip a | grep "inet " -B 3 |\
 		awk '/^[0-9][0-9]*:/ {print $2}' |\
@@ -6,7 +8,7 @@ find_iface() {
 }
 
 dhcp_data() {
-	unbuffer tcpdump -ni $IFACE -vvv 'udp port 67 or udp port 68'
+	unbuffer tcpdump -ni "$IFACE" -vvv 'udp port 67 or udp port 68'
 }
 
 host_ip_filter() {

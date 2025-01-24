@@ -1,3 +1,4 @@
+#!/bin/bash
 
 subscribe()
 {
@@ -13,22 +14,24 @@ notify()
 {
 	local callback="$1"
 	shift
-	$callback $@
+	$callback "$@"
 }
 
 notify_all()
 {
-	local listeners="$(cat "$1")"
+	local listeners
+	listeners="$(cat "$1")"
 	shift
 	for listener in $listeners; do
-		notify $listener $@
+		notify "$listener" "$@"
 	done
 }
 
 event_handler()
 {
 	local db="$1"
-	while read event; do
+	while read -r event; do
+		# shellcheck disable=SC2086
 		notify_all "$db" $event
 	done
 }

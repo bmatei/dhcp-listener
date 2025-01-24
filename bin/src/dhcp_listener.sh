@@ -1,9 +1,11 @@
 #!/bin/bash
+# shellcheck disable=SC1091
+
 
 INSTALL_PATH=${INSTALL_PATH:-/usr}
 
-. $INSTALL_PATH/lib/dhcp_listener_func.sh
-. $INSTALL_PATH/lib/event_handler.sh
+source "$INSTALL_PATH"/lib/dhcp_listener_func.sh
+source "$INSTALL_PATH"/lib/event_handler.sh
 
 DB="$INSTALL_PATH/share/dhcp_listener/subscribers"
 IFACE=${IFACE:-$(find_iface)}
